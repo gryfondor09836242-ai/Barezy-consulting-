@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barezy Consulting | Solutions d'Hébergement Web Professionnelles</title>
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --secondary: #0284c7;
+            --dark: #0f172a;
+            --light: #f8fafc;
+            --accent: #22c55e;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        header {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        .cta-btn {
+            background-color: var(--secondary);
+            color: white !important;
+            padding: 0.5rem 1.2rem;
+            border-radius: 5px;
+        }
+        .cta-btn:hover {
+            background-color: var(--primary);
+        }
+        .hero {
+            padding: 8rem 2rem 5rem;
+            background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+            color: white;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+        .pricing {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 5rem 2rem;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+            color: var(--primary);
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        .card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            border: 1px solid #e2e8f0;
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card.featured {
+            border-color: var(--secondary);
+            position: relative;
+        }
+        .card.featured::top {
+            content: 'Populaire';
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--accent);
+            color: white;
+            padding: 0.2rem 0.8rem;
+            font-size: 0.8rem;
+            border-radius: 20px;
+        }
+        .price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            margin: 1.5rem 0;
+        }
+        .features-list {
+            list-style: none;
+            margin: 2rem 0;
+            text-align: left;
+        }
+        .features-list li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .features-list li::before {
+            content: '✓';
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .card-btn {
+            display: inline-block;
+            width: 100%;
+            padding: 0.8rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .card-btn.alt {
+            background-color: var(--secondary);
+        }
+        .features-section {
+            background-color: #f1f5f9;
+            padding: 5rem 2rem;
+        }
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav class="nav-container">
+            <a href="#" class="logo">Barezy Consulting</a>
+            <ul class="nav-links">
+                <li><a href="#offres">Offres</a></li>
+                <li><a href="#Pourquoi-nous">Avantages</a></li>
+                <li><a href="#contact" class="cta-btn">Espace Client</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Hébergement Web Haute Performance pour Entreprises</h1>
+        <p>Barezy Consulting propulse votre présence en ligne avec des serveurs sécurisés, ultra-rapides et un accompagnement technique sur-mesure pour vos projets critiques.</p>
+        <a href="#offres" class="cta-btn" style="padding: 0.8rem 2rem; font-size: 1.1rem; text-decoration: none;">Découvrir nos offres</a>
+    </section>
+
+    <section id="offres" class="pricing">
+        <h2 class="section-title">Nos Formules d'Hébergement</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Pack Starter</h3>
+                <p>Idéal pour les vitrines et blogs</p>
+                <div class="price">9.900 F /mois</div>
+                <ul class="features-list">
+                    <li>50 Go Espace SSD NVMe</li>
+                    <li>1 Nom de domaine inclus</li>
+                    <li>Bases de données illimitées</li>
+                    <li>Certificat SSL Let's Encrypt</li>
+                </ul>
+                <a href="#" class="card-btn">Choisir cette offre</a>
+            </div>
+            
+            <div class="card featured">
+                <h3>Pack Business</h3>
+                <p>Optimisé pour les PME et e-commerce</p>
+                <div class="price">24.900 F /mois</div>
+                <ul class="features-list">
+                    <li>200 Go Espace SSD NVMe</li>
+                    <li>Performances RAM & CPU dédiées</li>
+                    <li>Sauvegardes quotidiennes automatiques</li>
+                    <li>Sécurité Anti-DDoS Avancée</li>
+                </ul>
+                <a href="#" class="card-btn alt">Choisir cette offre</a>
+            </div>
+
+            <div class="card">
+                <h3>Pack Cloud Dédié</h3>
+                <p>Pour les infrastructures critiques</p>
+                <div class="price">79.000 F /mois</div>
+                <ul class="features-list">
+                    <li>Ressources 100% Dédiées</li>
+                    <li>Infogérance Barezy 24/7</li>
+                    <li>IP Dédiée incluse</li>
+                    <li>Trafic Mensuel Illimité</li>
+                </ul>
+                <a href="#" class="card-btn">Contacter un Expert</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="Pourquoi-nous" class="features-section">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 class="section-title">Pourquoi choisir Barezy Consulting ?</h2>
+            <div class="grid">
+                <div style="background: white; padding: 2rem; border-radius: 8px;">
+                    <h4>Vitesse & Performance</h4>
+                    <p>Infrastructures modernes dotées de disques NVMe dernière génération pour un chargement instantané de vos pages.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 8px;">
+                    <h4>Sécurité Maximale</h4>
+                    <p>Protection contre les cyberattaques, pare-feu applicatif (WAF) et certificats de sécurité systématiquement intégrés.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 8px;">
+                    <h4>Support de Proximité</h4>
+                    <p>Une équipe d'ingénieurs à votre écoute pour assurer la disponibilité de vos applications et services sans interruption.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Barezy Consulting. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
